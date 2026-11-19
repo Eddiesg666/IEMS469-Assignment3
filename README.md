@@ -59,7 +59,7 @@ The serial job trains C=4% or 10% and E=1 or 5, selecting on final validation ac
 
 For the privacy simulation, pixels are inverted after normalization (1-x), noise is independent coordinate-wise Laplace, and each client's training perturbation is fixed using a reproducible public seed. Validation/test stay clean. A public seed is not private randomness, and the experiment does not certify record-level or user-level differential privacy. Do not publish original or perturbed data. Final noisy model accuracy is evaluated on clean held-out data. The driver simulates local evaluation and aggregates scalar metrics rather than enforcing a real security boundary.
 
-## Files and submission
+## Files
 
 - `data.py`: load exact Canvas object arrays and preserve writer identity; preparation is deterministic.
 - `fedavg.py`: network, local SGD, sample-weighted aggregation, per-round checkpoint/resume, Ray actor runner, evaluation.
@@ -68,6 +68,5 @@ For the privacy simulation, pixels are inverted after normalization (1-x), noise
 - `plots.py`, `build_report.py`: reproducible plots and PDF generation.
 - `runs/`: included real sequential results, final weights, configurations, histories and plots. Timing for serial vs Ray is only comparable if both run on the same hardware; the report does not claim cross-machine speedup.
 
-Create a **public** GitHub repository named `IEMS469-Assignment3`. Keep the provided `.gitignore` (course raw data, prepared partitions, round checkpoints, local environments and draft PDF excluded). Inspect `git status` before committing. Upload source, validation results, figures and final PDF; ensure your repo is publicly visible. Submit `assignment3_report.pdf` to Canvas once the final Ray result is included.
 
 References: Canvas Assignment 3, LEAF (arXiv:1812.01097); Ray Core [walkthrough](https://docs.ray.io/en/latest/ray-core/walkthrough.html) and [actors](https://docs.ray.io/en/latest/ray-core/actors.html).
