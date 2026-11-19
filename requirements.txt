@@ -1,0 +1,7 @@
+# Python 3.9+; pip selects a Ray release supporting the active Python and platform.
+numpy>=1.26,<3
+torch>=2.2
+matplotlib>=3.8,<4
+reportlab==4.2.5
+pytest>=8,<10
+ray>=2.10,<3

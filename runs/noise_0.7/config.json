@@ -1,0 +1,11 @@
+{
+  "k": 10,
+  "epochs": 5,
+  "rounds": 60,
+  "seed": 2026,
+  "b": 0.7,
+  "lr": 0.08,
+  "batch": 32,
+  "backend": "serial",
+  "dataset": "b23a2f2e5c9c0ee60c0577b2ec4a322a8e7273f06a3a3410ad3fe830e407987d"
+}
